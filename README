@@ -1,0 +1,3 @@
+LIST OF ALL VEHICLES: http://localhost:8080/website/vehicles/list.html
+EXAMPLE PAGE FOR INFO ABOUT CAR1: http://localhost:8080/website/vehicles/vehicle/Car1
+REGISTER A NEW CAR: http://localhost:8080/website/vehicles/newVehicle.html

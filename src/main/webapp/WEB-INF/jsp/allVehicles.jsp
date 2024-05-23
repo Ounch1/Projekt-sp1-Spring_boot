@@ -10,7 +10,7 @@
 
 <ul>
    <c:forEach items="${vehicles}" var="vehicle">
-      <li>${vehicle}</li>
+      <li>|ID: ${vehicle.id} |NAME: ${vehicle.name} |LATLONG: ${vehicle.latlong} |ODOMETER:  ${vehicle.odometer} |STATUS: ${vehicle.status}</li>
    </c:forEach>
 </ul>
 </body>

@@ -18,10 +18,6 @@ public class Vehicle {
 
     public Vehicle() {}
 
-    public String toString() {
-        return this.name + " odometer " + this.odometer;
-    }
-
     public String getCurrentDriver() {
         return currentDriver;
     }
@@ -63,5 +59,9 @@ public class Vehicle {
     }
     public String getLatlong() {
         return latlong;
+    }
+
+    public String toString() {
+        return "name: " + this.name + " | odometer: " + this.odometer;
     }
 }
