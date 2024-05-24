@@ -1,22 +1,23 @@
 package se.yrgo.rest;
 
+import se.yrgo.domain.Person;
+
 import java.util.List;
-import se.yrgo.domain.Vehicle;
 
 public class VehicleList {
-    private List<Vehicle>vehicles;
+    private List<Person> people;
 
     public VehicleList() {}
 
-    public VehicleList(List<Vehicle> vehicles) {
-        this.vehicles=vehicles;
+    public VehicleList(List<Person> people) {
+        this.people = people;
     }
 
-    public List<Vehicle> getVehicles() {
-        return vehicles;
+    public List<Person> getVehicles() {
+        return people;
     }
 
-    public void setVehicles(List<Vehicle> vehicles) {
-        this.vehicles = vehicles;
+    public void setVehicles(List<Person> people) {
+        this.people = people;
     }
 }

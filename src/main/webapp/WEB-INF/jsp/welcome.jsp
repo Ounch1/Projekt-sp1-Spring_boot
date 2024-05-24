@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<h1>Welcome to fleetman, the date and time is ${dateAndTime}</h1>
+<h1>Welcome to LiftCalc, the date and time is ${dateAndTime}</h1>
 <html>
 <head>
-    <title>Number List</title>
+    <title>Number of Persons</title>
 </head>
 <body>
 <ul>

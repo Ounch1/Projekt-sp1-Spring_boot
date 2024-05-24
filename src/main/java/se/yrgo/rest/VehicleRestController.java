@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import se.yrgo.data.VehicleRepository;
-import se.yrgo.domain.Vehicle;
+import se.yrgo.domain.Person;
 
 @RestController
 public class VehicleRestController {
@@ -19,14 +19,14 @@ public class VehicleRestController {
 
     @RequestMapping("/vehicles")
     public VehicleList allVehicles() {
-        List<Vehicle>all = data.findAll();
+        List<Person>all = data.findAll();
         return new VehicleList(all);
     }
 
     @RequestMapping(value= "/vehicles", method=RequestMethod.POST)
-    public ResponseEntity createANewVehicle(@RequestBody Vehicle
-                                                    vehicle) {
-        data.save(vehicle);
-        return new ResponseEntity<Vehicle>(vehicle,HttpStatus.CREATED);
+    public ResponseEntity createANewVehicle(@RequestBody Person
+                                                    person) {
+        data.save(person);
+        return new ResponseEntity<Person>(person,HttpStatus.CREATED);
     }
 }
