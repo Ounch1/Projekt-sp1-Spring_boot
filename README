@@ -1,3 +1,3 @@
-LIST OF ALL VEHICLES: http://localhost:8080/website/people/list.html
-EXAMPLE PAGE FOR INFO ABOUT CAR1: http://localhost:8080/website/people/person/Car1
-REGISTER A NEW CAR: http://localhost:8080/website/people/newPerson.html
+LIST OF ALL PEOPLE: http://localhost:8080/website/persons/list.html
+EXAMPLE PAGE FOR INFO ABOUT Fredrik: http://localhost:8080/website/persons/person/fredrik
+REGISTER A NEW PERSON: http://localhost:8080/website/persons/newPerson.html
