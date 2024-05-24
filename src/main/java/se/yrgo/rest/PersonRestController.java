@@ -17,10 +17,13 @@ public class PersonRestController {
     @Autowired
     private PersonRepository data;
 
-    @RequestMapping("/persons")
-    public PersonList allPeople() {
-        List<Person>all = data.findAll();
-        return new PersonList(all);
+    @RequestMapping(value = "/persons", method = RequestMethod.GET)
+    public ResponseEntity<List<Person>> allPeople() {
+        List<Person> allPeople = data.findAll();
+        if (allPeople.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(allPeople, HttpStatus.OK);
     }
 
     @RequestMapping(value= "/persons", method=RequestMethod.POST)
@@ -29,4 +32,6 @@ public class PersonRestController {
         data.save(person);
         return new ResponseEntity<Person>(person,HttpStatus.CREATED);
     }
+
+
 }

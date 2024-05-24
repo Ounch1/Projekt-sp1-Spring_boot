@@ -31,7 +31,7 @@ public class PersonController {
         return new ModelAndView("newPerson", "form", newPerson);
     }
 
-    @RequestMapping(value="/list.html", method=RequestMethod.GET) // Get all vehicles in the repository
+    @RequestMapping(value="/list.html", method=RequestMethod.GET) // Get all people in the repository
     public ModelAndView persons(){
         List<Person> allPeople = data.findAll();
         return new ModelAndView("allPersons" , "persons",
@@ -39,8 +39,8 @@ public class PersonController {
     }
 
 
-    @RequestMapping(value="/person/{name}") // Do not include {} in the URL, so for example http://localhost:8080/website/vehicles/vehicle/Car1
-    public ModelAndView showPersonByName(@PathVariable("name") String name) {// PathVariable means it takes value from @RequestMapping(value="/vehicle/{name}")
+    @RequestMapping(value="/person/{name}") // Do not include {} in the URL, so for example http://localhost:8080/website/persons/person/Fredrik
+    public ModelAndView showPersonByName(@PathVariable("name") String name) {// PathVariable means it takes value from @RequestMapping(value="/person/{name}")
         List<Person> allPeople = data.findAll();
         Person person = null;
 
@@ -50,7 +50,7 @@ public class PersonController {
         }
 
 
-        return new ModelAndView("personInfo" , "person", person); // Pass on vehicle object to personInfo.jsp
+        return new ModelAndView("personInfo" , "person", person); // Pass on person object to personInfo.jsp
     }
     
 }
