@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
 @SpringBootApplication (exclude = { SecurityAutoConfiguration.class })
-public class FleetmanApplication {
+public class LiftCalc {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FleetmanApplication.class, args);
+		SpringApplication.run(LiftCalc.class, args);
 	}
 
 }
