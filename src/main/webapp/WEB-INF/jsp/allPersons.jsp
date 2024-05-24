@@ -9,8 +9,8 @@
 <h1>Athletes page</h1>
 
 <ul>
-   <c:forEach items="${allPersons}" var="person">
-      <li>|ID: ${person.id} |NAME: ${person.name} |WEIGHT: ${person.weight} |AGE:  ${person.age} |GENDER: ${person.gender}</li>
+   <c:forEach items="${persons}" var="person">
+      <li>: ${person.name} |WEIGHT: ${person.weight} |AGE:  ${person.age} |GENDER: ${person.gender}</li>
    </c:forEach>
 </ul>
 </body>
