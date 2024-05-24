@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import se.yrgo.domain.Person;
 
 @Repository
-public interface VehicleRepository extends JpaRepository<Person, Long> {
+public interface PersonRepository extends JpaRepository<Person, Long> {
     public Person findByName(String name);
 }

@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import se.yrgo.data.VehicleRepository;
+import se.yrgo.data.PersonRepository;
 import se.yrgo.domain.Person;
 
 @Controller
 @RequestMapping("/website/persons") // Base URL
 public class PersonController {
     @Autowired
-    private VehicleRepository data; // Where all the data is stored (?)
+    private PersonRepository data; // Where all the data is stored (?)
 
     @RequestMapping(value="/newPerson.html",method=RequestMethod.POST) // RequestMethod.POST means it will be a page where you can submit data
     public String newPerson(Person person) {

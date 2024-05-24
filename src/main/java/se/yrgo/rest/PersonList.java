@@ -4,20 +4,20 @@ import se.yrgo.domain.Person;
 
 import java.util.List;
 
-public class VehicleList {
+public class PersonList {
     private List<Person> people;
 
-    public VehicleList() {}
+    public PersonList() {}
 
-    public VehicleList(List<Person> people) {
+    public PersonList(List<Person> people) {
         this.people = people;
     }
 
-    public List<Person> getVehicles() {
+    public List<Person> getPeople() {
         return people;
     }
 
-    public void setVehicles(List<Person> people) {
+    public void setPeople(List<Person> people) {
         this.people = people;
     }
 }

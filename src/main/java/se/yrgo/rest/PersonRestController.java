@@ -8,22 +8,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import se.yrgo.data.VehicleRepository;
+import se.yrgo.data.PersonRepository;
 import se.yrgo.domain.Person;
 
 @RestController
-public class VehicleRestController {
+public class PersonRestController {
 
     @Autowired
-    private VehicleRepository data;
+    private PersonRepository data;
 
-    @RequestMapping("/vehicles")
-    public VehicleList allVehicles() {
+    @RequestMapping("/persons")
+    public PersonList allPeople() {
         List<Person>all = data.findAll();
-        return new VehicleList(all);
+        return new PersonList(all);
     }
 
-    @RequestMapping(value= "/vehicles", method=RequestMethod.POST)
+    @RequestMapping(value= "/persons", method=RequestMethod.POST)
     public ResponseEntity createANewVehicle(@RequestBody Person
                                                     person) {
         data.save(person);
