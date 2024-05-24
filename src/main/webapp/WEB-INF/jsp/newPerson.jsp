@@ -17,13 +17,21 @@
         <form:errors path="age" />
     </div>
     <div>
+        <form:label path="height">Height</form:label>
+        <form:input path="height" />
+        <form:errors path="height" />
+    </div>
+    <div>
         <form:label path="weight">Weight</form:label>
         <form:input path="weight" />
         <form:errors path="weight" />
     </div>
     <div>
         <form:label path="gender">Gender</form:label>
-        <form:input path="gender" />
+        <form:select path="gender">
+            <form:option value="Male">Male</form:option>
+            <form:option value="Female">Female</form:option>
+        </form:select>
         <form:errors path="gender" />
     </div>
     <div>

@@ -11,6 +11,7 @@ public class Person {
     @Id
     public long id;
     public String name;
+    public int height;
     public int weight;
     public int age;
     public String gender;
@@ -33,6 +34,14 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     public int getWeight() {
@@ -62,6 +71,6 @@ public class Person {
 
 
     public String toString(){
-        return String.format("Name: %s%nWeight: %d%nAge: %d%nGender: %s%n",name,weight,age,gender);
+        return String.format("Name: %s%nHeight: %d%nWeight: %d%nAge: %d%nGender: %s%n",name,height,weight,age,gender);
     }
 }
