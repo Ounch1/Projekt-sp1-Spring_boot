@@ -1,4 +1,3 @@
 
-<h1>Vehicle Info for ${person.name}</h1>
-
-<p>The clock on this person is ${person.odometer}</p>
+<h1>Person weight lifting goals:
+    ${person.name}</h1>
