@@ -9,11 +9,11 @@ import jakarta.persistence.Id;
 public class Person {
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Id
-    private long id;
-    private String name;
-    private int weight;
-    private int age;
-    private String gender;
+    public long id;
+    public String name;
+    public int weight;
+    public int age;
+    public String gender;
 
 
 
@@ -42,19 +42,19 @@ public class Person {
         this.weight = weight;
     }
 
-    private void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    private int getAge() {
+    public int getAge() {
         return age;
     }
 
-    private void setGender(String gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
-    private String getGender() {
+    public String getGender() {
         return gender;  
     }
 
