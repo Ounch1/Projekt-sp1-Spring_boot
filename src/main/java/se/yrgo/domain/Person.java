@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Person {
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     public long id;
     public String name;
@@ -16,12 +16,13 @@ public class Person {
     public String gender;
 
 
-
-    public Person() {}
+    public Person() {
+    }
 
     public long getId() {
         return id;
     }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -54,12 +55,13 @@ public class Person {
         this.gender = gender;
     }
 
-    public String getGender() {
-        return gender;  
+
+    private String getGender() {
+        return gender;
     }
 
 
-    public String toString() {
-        return "name: " + this.name + " | weight: " + this.weight;
+    public String toString(){
+        return String.format("Name: %s%nWeight: %d%nAge: %d%nGender: %s%n",name,weight,age,gender);
     }
 }
