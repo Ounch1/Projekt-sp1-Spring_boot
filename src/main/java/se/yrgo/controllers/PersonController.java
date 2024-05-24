@@ -1,7 +1,10 @@
 package se.yrgo.controllers;
 
 import java.util.List;
+import java.util.Objects;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +41,15 @@ public class PersonController {
 
     @RequestMapping(value="/person/{name}") // Do not include {} in the URL, so for example http://localhost:8080/website/vehicles/vehicle/Car1
     public ModelAndView showPersonByName(@PathVariable("name") String name) {// PathVariable means it takes value from @RequestMapping(value="/vehicle/{name}")
-        Person person = data.findByName(name);
+        List<Person> allPeople = data.findAll();
+        Person person = null;
+
+        for (Person p : allPeople)
+        {
+            if (p.name.equals(name)) person = p;
+        }
+
+
         return new ModelAndView("personInfo" , "person", person); // Pass on vehicle object to personInfo.jsp
     }
     
