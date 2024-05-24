@@ -56,7 +56,7 @@ public class Person {
     }
 
 
-    private String getGender() {
+    public String getGender() {
         return gender;
     }
 
