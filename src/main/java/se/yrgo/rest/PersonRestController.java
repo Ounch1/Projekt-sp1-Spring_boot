@@ -24,7 +24,7 @@ public class PersonRestController {
     }
 
     @RequestMapping(value= "/persons", method=RequestMethod.POST)
-    public ResponseEntity createANewVehicle(@RequestBody Person
+    public ResponseEntity createANewPerson(@RequestBody Person
                                                     person) {
         data.save(person);
         return new ResponseEntity<Person>(person,HttpStatus.CREATED);
