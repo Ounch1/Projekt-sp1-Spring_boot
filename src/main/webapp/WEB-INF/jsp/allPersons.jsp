@@ -10,7 +10,7 @@
 
 <ul>
    <c:forEach items="${persons}" var="person">
-      <li>|ID: ${person.id} |NAME: ${person.name} |WEIGHT: ${person.weight} |AGE:  ${person.age} |GENDER: ${person.gender}</li>
+      <li>: ${person.name} |WEIGHT: ${person.weight} |AGE:  ${person.age} |GENDER: ${person.gender}</li>
    </c:forEach>
 </ul>
 </body>
