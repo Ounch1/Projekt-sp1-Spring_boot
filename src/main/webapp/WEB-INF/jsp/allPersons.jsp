@@ -10,8 +10,17 @@
 
 <ul>
    <c:forEach items="${persons}" var="person">
-      <li>: ${person.name} |HEIGHT: ${person.height} |WEIGHT: ${person.weight} |AGE:  ${person.age} |GENDER: ${person.gender}</li>
+      <li>
+         <a href="http://localhost:8080/website/persons/person/${person.name}">${person.name}</a> 
+         | HEIGHT: ${person.height} 
+         | WEIGHT: ${person.weight} 
+         | AGE:  ${person.age} 
+         | GENDER: ${person.gender}
+      </li>
    </c:forEach>
+   <br>
+   <br>
+   <li><a href="http://localhost:8080/home.html">Back to homepage</a></li>
 </ul>
 </body>
 </html>
