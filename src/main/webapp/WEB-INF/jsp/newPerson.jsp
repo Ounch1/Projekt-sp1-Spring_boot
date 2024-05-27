@@ -38,5 +38,7 @@
         <input type="submit" />
     </div>
 </form:form>
+    <li><a href="http://localhost:8080/home.html">Back to homepage</a></li>
+    <li><a href="http://localhost:8080/website/persons/list.html">View all athletes</a></li>
 </body>
 </html>

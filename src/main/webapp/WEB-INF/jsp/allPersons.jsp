@@ -20,6 +20,9 @@
          </a>
       </li>
    </c:forEach>
+   <br>
+   <br>
+   <li><a href="http://localhost:8080/home.html">Back to homepage</a></li>
 </ul>
 </body>
 </html>
